@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>القدس: مدينة الأنبياء</title>
+
+<style>
+body{
+    font-family: Arial;
+    direction: rtl;
+    margin:0;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* العنوان */
+header{
+    text-align:center;
+    padding:30px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* الأقسام */
+.section{
+    display:none;
+    padding:30px;
+    animation: fade 0.7s;
+}
+
+.active{
+    display:block;
+}
+
+/* الأزرار */
+button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    background:#00c3ff;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0099cc;
+}
+
+/* كروت */
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin:20px 0;
+}
+
+/* الخط الزمني */
+.timeline{
+    border-right:3px solid #00c3ff;
+    padding-right:20px;
+}
+
+.timeline div{
+    margin:15px 0;
+}
+
+/* انيميشن */
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+.center{
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+القدس: مدينة الأنبياء، قلب الأمة
+</header>
+
+<!-- المقدمة -->
+<div id="intro" class="section active center">
+<h2>رحلة عبر الزمن</h2>
+
+<p>
+القدس من أقدم مدن العالم، عُرفت بأسماء مثل أورسالم وإيلياء،
+وتُعد مدينة مقدسة في الإسلام والمسيحية واليهودية.
+</p>
+
+<div class="card">
+📚 المصدر: كتاب "تاريخ القدس" – عارف العارف، موسوعة Britannica
+</div>
+
+<button onclick="showSection('omar')">ابدأ الرحلة</button>
+</div>
+
+<!-- الفتح الإسلامي -->
+<div id="omar" class="section">
+<h2>الفتح الإسلامي (638م)</h2>
+
+<p>
+دخل الخليفة عمر بن الخطاب القدس بعد حصار سلمي،
+واستلم مفاتيحها من البطريرك صفرونيوس.
+</p>
+
+<button onclick="toggle('treaty')">المعاهدة العمرية</button>
+
+<div id="treaty" class="card" style="display:none;">
+<p>
+ضمنت الأمان لأهل القدس على أنفسهم وأموالهم وكنائسهم،
+وحرية العبادة وعدم الإكراه على الدين.
+</p>
+</div>
+
+<div class="card">
+📚 المصدر:
+الطبري - تاريخ الرسل والملوك،
+ابن كثير - البداية والنهاية
+</div>
+
+<button onclick="showSection('crusades')">التالي</button>
+</div>
+
+<!-- الصليبيين -->
+<div id="crusades" class="section">
+<h2>الصليبيون في القدس</h2>
+
+<div class="card">
+1099م: احتلال القدس وإقامة مملكة القدس اللاتينية
+</div>
+
+<div class="card">
+1187م: استعادها صلاح الدين الأيوبي بعد معركة حطين
+</div>
+
+<button onclick="toggle('salah')">قصة صلاح الدين</button>
+
+<div id="salah" class="card" style="display:none;">
+<p>
+بعد انتصاره في معركة حطين، حاصر صلاح الدين القدس
+واستعادها بطريقة سلمية نسبياً، وسمح للسكان بالمغادرة.
+</p>
+</div>
+
+<div class="card">
+📚 المصدر:
+ابن الأثير - الكامل في التاريخ،
+Karen Armstrong - Jerusalem
+</div>
+
+<button onclick="showSection('ottoman')">التالي</button>
+</div>
+
+<!-- العثمانيين -->
+<div id="ottoman" class="section">
+<h2>الحكم العثماني</h2>
+
+<p>
+دخلت القدس تحت الحكم العثماني عام 1517م،
+وشهدت استقراراً وإعماراً كبيراً.
+</p>
+
+<div class="card">
+سور القدس: طوله حوالي 4 كم، بُني في عهد السلطان سليمان القانوني
+</div>
+
+<div class="card">
+تم ترميم المسجد الأقصى وقبة الصخرة
+</div>
+
+<div class="card">
+📚 المصدر:
+الموسوعة الفلسطينية،
+الأرشيف العثماني
+</div>
+
+<button onclick="showSection('wars')">التالي</button>
+</div>
+
+<!-- الحروب -->
+<div id="wars" class="section">
+<h2>الحروب والصراعات</h2>
+
+<div class="timeline">
+<div>الحروب الصليبية</div>
+<div>1917: الانتداب البريطاني</div>
+<div>1967: احتلال القدس الشرقية</div>
+</div>
+
+<div class="card">
+📚 المصدر:
+Britannica،
+القدس في الصراع العربي الإسرائيلي
+</div>
+
+<button onclick="showSection('today')">التالي</button>
+</div>
+
+<!-- اليوم -->
+<div id="today" class="section center">
+<h2>القدس اليوم</h2>
+
+<p>
+تُعد القدس مركزاً دينياً وثقافياً مهماً،
+ويواجه سكانها تحديات كبيرة لكنهم يتمسكون بهويتهم.
+</p>
+
+<div class="card">
+📚 المصدر:
+تقارير الأمم المتحدة،
+الجزيرة الوثائقية
+</div>
+
+<button onclick="showSection('intro')">إعادة العرض</button>
+</div>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec=>sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function toggle(id){
+    let el = document.getElementById(id);
+    if(el.style.display === "none"){
+        el.style.display = "block";
+    }else{
+        el.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
